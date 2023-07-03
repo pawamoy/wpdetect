@@ -24,7 +24,7 @@ new_version=$($python_executable utils/bump_version.py)
 echo "Committing version $new_version"
 git add pyproject.toml
 git add wpdetect/__main__.py
-git commit -S -m "release $new_version"
+git commit -S -m "release $new_version" || exit 1
 
 
 # Tag the release
